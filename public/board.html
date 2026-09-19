@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/board.css">
+
+    <title>Board</title>
+</head>
+
+<body>
+
+<header>
+
+    <h1>Rotten</h1>
+
+    <p>
+
+        <a href="/">Home</a>
+
+        
+
+        <span id="board-name">
+            Anime & Manga
+        </span>
+
+    </p>
+
+</header>
+
+<section id="board-info">
+
+<h1 id="board-title">Loading...</h1>
+
+<p id="board-description">Loading board...</p>
+
+</section>
+
+<section id="new-thread">
+
+    <div class="titlebar">
+
+        Create Thread
+
+    </div>
+
+ <form id="thread-form">
+
+    <label>Name</label>
+
+    <input
+        id="thread-name"
+        type="text"
+        placeholder="Anonymous">
+
+    <label>Subject</label>
+
+    <input
+        id="thread-subject"
+        type="text">
+
+    <label>Image</label>
+
+    <input
+        id="thread-image"
+        type="file">
+
+    <label>Comment</label>
+
+    <textarea
+        id="thread-comment"
+        rows="8"></textarea>
+
+    <button type="submit">
+
+        Create Thread
+
+    </button>
+
+</form>
+
+</section>
+
+<section id="threads">
+
+    <!--
+        TODO
+
+        Backend inserts all threads here.
+
+    -->
+
+</section>
+
+<script src="/board.js"></script>
+   </div>
+        <div class="fuzzy-overlay"></div>
+    </div>
+</body>
+
+</html>

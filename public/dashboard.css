@@ -1,0 +1,250 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    font-family: Arial, sans-serif;
+
+    background: #eeeeee;
+
+    color: #222;
+}
+
+
+/* ================================= */
+/* Header */
+/* ================================= */
+
+.dashboard-header {
+
+    background: #222;
+
+    color: white;
+
+    padding: 20px 30px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+.dashboard-header h1 {
+
+    margin: 0;
+
+}
+
+.dashboard-header p {
+
+    margin: 5px 0 0;
+
+    color: #bbb;
+
+}
+
+.dashboard-header a {
+
+    color: white;
+
+    text-decoration: none;
+
+}
+
+
+/* ================================= */
+/* Dashboard */
+/* ================================= */
+
+.dashboard {
+
+    width: 95%;
+
+    max-width: 1200px;
+
+    margin: 30px auto;
+
+}
+
+
+/* ================================= */
+/* Search */
+/* ================================= */
+
+.search-section {
+
+    background: white;
+
+    padding: 20px;
+
+    border: 1px solid #ccc;
+
+    margin-bottom: 20px;
+
+}
+
+.search-section h2 {
+
+    margin-top: 0;
+
+}
+
+#search-form {
+
+    display: flex;
+
+    gap: 10px;
+
+}
+
+#search-input {
+
+    flex: 1;
+
+    padding: 10px;
+
+    border: 1px solid #aaa;
+
+}
+
+button {
+
+    padding: 10px 16px;
+
+    border: 1px solid #888;
+
+    background: #ddd;
+
+    cursor: pointer;
+
+}
+
+button:hover {
+
+    background: #ccc;
+
+}
+
+
+/* ================================= */
+/* Thread list */
+/* ================================= */
+
+.thread-list-section {
+
+    background: white;
+
+    padding: 20px;
+
+    border: 1px solid #ccc;
+
+}
+
+.thread-list-section h2 {
+
+    margin-top: 0;
+
+}
+
+
+.thread-item {
+
+    border-bottom: 1px solid #ddd;
+
+    padding: 15px 5px;
+
+    cursor: pointer;
+
+}
+
+.thread-item:hover {
+
+    background: #f5f5f5;
+
+}
+
+.thread-item h3 {
+
+    margin: 0 0 8px;
+
+}
+
+.thread-meta {
+
+    color: #777;
+
+    font-size: 14px;
+
+}
+
+
+/* ================================= */
+/* Thread details */
+/* ================================= */
+
+.thread-details {
+
+    background: white;
+
+    border: 1px solid #ccc;
+
+    padding: 20px;
+
+    margin-top: 20px;
+
+}
+
+.thread-details h2 {
+
+    margin-top: 0;
+
+}
+
+.thread-comment {
+
+    padding: 15px;
+
+    background: #f5f5f5;
+
+    margin: 15px 0;
+
+}
+
+.reply {
+
+    border-left: 3px solid #aaa;
+
+    padding: 10px 15px;
+
+    margin: 10px 0;
+
+    background: #f8f8f8;
+
+}
+
+
+/* ================================= */
+/* Delete */
+/* ================================= */
+
+.delete-thread {
+
+    background: #b00020;
+
+    color: white;
+
+    border: none;
+
+    margin-top: 20px;
+
+}
+
+.delete-thread:hover {
+
+    background: #8b0018;
+
+}

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rotten - Moderation Dashboard</title>
+
+    <link rel="stylesheet" href="/dashboard.css">
+
+</head>
+
+<body>
+
+<header class="dashboard-header">
+
+    <div>
+        <h1>Rotten</h1>
+        <p>Moderation Dashboard</p>
+    </div>
+    <button id="logout-button">
+    Logout
+</button>
+
+    <a href="/">← Back to Rotten</a>
+
+</header>
+
+
+<main class="dashboard">
+
+    <!-- ============================= -->
+    <!-- Search -->
+    <!-- ============================= -->
+
+    <section class="search-section">
+
+        <h2>Thread Search</h2>
+
+        <form id="search-form">
+
+            <input
+                id="search-input"
+                type="text"
+                placeholder="Search threads..."
+            >
+
+            <button type="submit">
+                Search
+            </button>
+
+            <button
+                type="button"
+                id="show-all">
+                Show All
+            </button>
+
+        </form>
+
+    </section>
+
+
+    <!-- ============================= -->
+    <!-- Thread list -->
+    <!-- ============================= -->
+
+    <section class="thread-list-section">
+
+        <h2>Threads</h2>
+
+        <div id="thread-list">
+
+            <p>Loading threads...</p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ============================= -->
+    <!-- Thread details -->
+    <!-- ============================= -->
+
+    <section
+        id="thread-details"
+        class="thread-details">
+
+        <p>Select a thread to inspect it.</p>
+
+    </section>
+
+</main>
+
+
+<script src="/dashboard.js"></script>
+
+</body>
+
+</html>

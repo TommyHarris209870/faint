@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="/board.css">
+
+    <title>Thread</title>
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>Rotten</h1>
+
+    <p>
+        <a href="/">Home</a>
+    </p>
+
+</header>
+
+<section id="thread-page">
+
+    <h1 id="thread-subject">
+        Loading...
+    </h1>
+
+    <div id="thread-author"></div>
+
+    <p id="thread-comment">
+        Loading thread...
+    </p>
+
+    <div id="thread-image"></div>
+
+    <hr>
+
+    <h2>Replies</h2>
+
+    <div id="replies">
+
+        <!-- Replies will appear here -->
+
+    </div>
+
+    <form id="reply-form">
+
+        <input
+            id="reply-name"
+            type="text"
+            placeholder="Anonymous"
+        >
+
+        <textarea
+            id="reply-comment"
+            placeholder="Write a reply..."
+            required
+        ></textarea>
+
+        <button type="submit">
+            Reply
+        </button>
+
+    </form>
+
+</section>
+
+<script src="/thread.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,416 @@
+
+body{
+
+ background-image: url("assets/a9e544cc9abc91a2bc365099f49c395b.gif");
+
+background-size: 50vw 50vh;
+
+background-position: center;
+
+background-repeat: no-repeat;
+
+background-attachment: fixed;
+
+background-color: black;
+
+color: #f0f0f0;
+
+display: flex;
+
+flex-direction: column;
+
+align-items: center;
+
+}
+
+#header1{
+
+    text-align: center;
+
+    margin-top: 20px;
+
+    color: #cd1818;
+
+}
+
+#boards{
+
+text-align: center;
+
+width: 70%;
+
+border: 3px solid rgb(184, 0, 0);
+
+    padding: 0;
+
+}
+
+#boards > div{
+
+     display: flex;
+
+     flex-direction: column;
+
+    justify-content: center;
+
+    gap: 60px;
+
+}
+
+.topdiv {
+
+    width: 100%;
+
+    height: 25px;
+
+    border-bottom: 2px solid rgb(195, 4, 4);
+
+    background-color: rgb(148, 13, 13);
+
+    box-sizing: border-box;
+
+    display: flex;
+
+    justify-content: left;
+
+}
+
+.topdiv > header{
+
+    margin-left: 1%;
+
+}
+
+#all-lists{
+
+        display: flex;
+
+    justify-content: center;
+
+    gap: 60px; 
+
+}
+
+#all-lists > div > h4{
+
+ color: red;
+
+ font-weight: bolder;
+
+}
+
+#all-lists >div > a{
+
+    color: red;
+
+}
+
+a {
+
+    color: #cd1818;
+
+    text-decoration: bold;
+
+    font-weight: bolder;
+
+}
+
+#describtion > div{
+
+     display: flex;
+
+     flex-direction: column;
+
+     justify-content: center;
+
+     gap: 10px;
+
+     text-align: center;
+
+     color: red;
+
+}
+
+#popular{
+
+text-align: center;
+
+width: 70%;
+
+border: 3px solid rgb(184, 0, 0);
+
+    padding: 0;
+
+}
+
+#popular > div{
+
+     display: flex;
+
+     flex-direction: column;
+
+     justify-content: center;
+
+     gap: 60px;
+
+}
+
+*,
+*::before,
+*::after {
+
+    box-sizing: border-box;
+
+    margin: 0;
+
+}
+
+.container {
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+.content {
+
+    height: 100vh;
+
+    display: grid;
+
+    place-items: center;
+
+    z-index: 5;
+
+    position: relative;
+
+}
+
+.fuzzy-overlay {
+
+    position: absolute;
+
+    inset: -200%;
+
+    background-image: url("assets/noise.png");
+
+    opacity: 12%;
+
+    z-index: 0;
+
+    /* pointer-events: none; */
+
+    animation: shift 0.2s linear infinite both;
+
+}
+
+@keyframes shift {
+
+    0% {
+
+        transform: translateX(10%) translateY(10%);
+
+    }
+
+    100% {
+
+        transform: translateX(-10%) translateY(-10%);
+
+    }
+
+}
+
+
+/* =========================================================
+   RESPONSIVE ONLY
+   Everything above this line is unchanged.
+   ========================================================= */
+
+
+/* Tablets */
+
+@media (max-width: 900px) {
+
+    #boards {
+
+        width: 85%;
+
+    }
+
+    #popular {
+
+        width: 85%;
+
+    }
+
+    #all-lists {
+
+        gap: 40px;
+
+        flex-wrap: wrap;
+
+    }
+
+}
+
+
+/* Phones */
+
+@media (max-width: 600px) {
+
+    body {
+
+        width: 100%;
+
+        overflow-x: hidden;
+
+    }
+
+
+    #header1 {
+
+        max-width: 95%;
+
+        font-size: 24px;
+
+    }
+
+
+    #boards {
+
+        width: 95%;
+
+    }
+
+
+    #popular {
+
+        width: 95%;
+
+    }
+
+
+    #boards > div {
+
+        gap: 35px;
+
+    }
+
+
+    #popular > div {
+
+        gap: 35px;
+
+    }
+
+
+    #all-lists {
+
+        gap: 25px;
+
+        flex-wrap: wrap;
+
+        padding: 10px;
+
+    }
+
+
+    #all-lists > div {
+
+        max-width: 100%;
+
+    }
+
+
+    .topdiv {
+
+        max-width: 100%;
+
+    }
+
+
+    .topdiv > header {
+
+        max-width: 95%;
+
+        overflow: hidden;
+
+        text-overflow: ellipsis;
+
+        white-space: nowrap;
+
+    }
+
+
+    #describtion > div {
+
+        max-width: 100%;
+
+        padding: 10px;
+
+        overflow-wrap: break-word;
+
+    }
+
+}
+
+
+/* Very small phones */
+
+@media (max-width: 400px) {
+
+    #header1 {
+
+        font-size: 21px;
+
+    }
+
+
+    #boards {
+
+        width: 98%;
+
+    }
+
+
+    #popular {
+
+        width: 98%;
+
+    }
+
+
+    #all-lists {
+
+        gap: 20px;
+
+        padding: 8px;
+
+    }
+
+
+    #boards > div {
+
+        gap: 25px;
+
+    }
+
+
+    #popular > div {
+
+        gap: 25px;
+
+    }
+
+}
+
+html,
+body {
+    overflow-y: auto;
+}
+html,
+body {
+    overflow-y: auto;
+    overflow-x: hidden;
+}

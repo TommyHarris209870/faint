@@ -1,0 +1,375 @@
+body {
+    background-image: url("assets/a9e544cc9abc91a2bc365099f49c395b.gif");
+
+    background-size: 50vw 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    color: #ddd;
+    background-color: black;
+    font-family: Verdana, sans-serif;
+
+    width: 70%;
+    max-width: 1200px;
+    margin: auto;
+
+    /* Prevents padding/borders from unexpectedly increasing element width */
+    box-sizing: border-box;
+}
+
+a {
+    color: #cc3333;
+    text-decoration: none;
+}
+
+h1 {
+    color: #cc2222;
+    text-align: center;
+}
+
+#board-info {
+    border: 2px solid #990000;
+    text-align: center;
+    margin-top: 20px;
+    color: rgb(167, 1, 1);
+}
+
+.titlebar {
+    background: #880000;
+    color: white;
+    padding: 6px;
+    font-weight: bold;
+}
+
+#new-thread {
+    border: 2px solid #990000;
+    margin-top: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+input,
+textarea {
+    background: #111;
+    color: white;
+    border: 1px solid #555;
+    margin-bottom: 10px;
+    padding: 6px;
+    box-sizing: border-box;
+    max-width: 100%;
+}
+
+button {
+    background: #880000;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* =========================
+   THREAD
+   ========================= */
+
+.thread {
+    border: 2px solid #8b0000;
+    margin: 20px 0;
+    padding: 15px;
+
+    /* Important for preventing long content from breaking the page */
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.thread h3 {
+    color: #cd1818;
+}
+
+.thread strong {
+    color: white;
+}
+
+/* =========================
+   POSTS
+   ========================= */
+
+.post {
+    display: flex;
+    gap: 20px;
+    padding: 15px;
+
+    /* Allows the content to shrink */
+    min-width: 0;
+}
+
+.post img {
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* =========================
+   REPLIES
+   ========================= */
+
+.replies {
+    margin-top: 15px;
+    margin-left: 25px;
+    border-left: 2px solid #4b4b4b;
+    padding-left: 15px;
+}
+
+.reply {
+    margin-left: 25px;
+    padding: 8px;
+    margin-bottom: 12px;
+
+    /* Prevents long text from overflowing */
+    min-width: 0;
+}
+
+.reply-form {
+    margin-top: 15px;
+}
+
+.reply-form textarea {
+    width: 100%;
+    resize: vertical;
+}
+
+.reply-form input {
+    width: 250px;
+    max-width: 100%;
+    margin-bottom: 8px;
+}
+
+/* =========================
+   POST ID
+   ========================= */
+
+.post-id {
+    margin-left: 8px;
+    color: #777;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.post-id:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   QUOTES
+   ========================= */
+
+.quote {
+    color: #789922;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.quote:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   HIGHLIGHT
+   ========================= */
+
+.highlight {
+    background: #fff3a0;
+    border: 1px solid orange;
+    transition: background 0.3s;
+}
+
+/* =========================
+   POST IMAGES
+   ========================= */
+
+.post-image {
+    margin: 10px 0;
+}
+
+.post-image img {
+    display: block;
+
+    max-width: 500px;
+    max-height: 500px;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+}
+
+/* =========================
+   CRT / NOISE EFFECT
+   ========================= */
+
+.fuzzy-overlay {
+    position: fixed;
+
+    /* Fixed works better than absolute for full-screen background noise */
+    inset: -200%;
+
+    background-image: url("assets/noise.png");
+
+    opacity: 0.12;
+
+    z-index: -1;
+
+    /* Prevents it from intercepting mouse clicks */
+    pointer-events: none;
+
+    animation: shift 0.2s linear infinite both;
+}
+
+@keyframes shift {
+    0% {
+        transform: translateX(10%) translateY(10%);
+    }
+
+    100% {
+        transform: translateX(-10%) translateY(-10%);
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+
+/* Tablets / smaller laptops */
+@media (max-width: 900px) {
+
+    body {
+        width: 85%;
+    }
+
+    .post {
+        gap: 15px;
+    }
+
+    .post img {
+        width: 160px;
+    }
+
+    .replies {
+        margin-left: 15px;
+        padding-left: 12px;
+    }
+
+}
+
+
+/* Phones */
+@media (max-width: 600px) {
+
+    body {
+        width: 95%;
+        margin: auto;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    #board-info {
+        margin-top: 10px;
+    }
+
+    .titlebar {
+        padding: 5px;
+    }
+
+    #new-thread {
+        margin-top: 15px;
+    }
+
+    form {
+        padding: 10px;
+    }
+
+    input,
+    textarea {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Stack post content vertically */
+    .post {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .post img {
+        width: auto;
+        max-width: 100%;
+        max-height: 300px;
+    }
+
+    .thread {
+        margin: 15px 0;
+        padding: 10px;
+    }
+
+    /* Reduce indentation on mobile */
+    .replies {
+        margin-left: 8px;
+        padding-left: 8px;
+    }
+
+    .reply {
+        margin-left: 0;
+        padding: 6px;
+    }
+
+    .reply-form input {
+        width: 100%;
+    }
+
+    .reply-form textarea {
+        width: 100%;
+    }
+
+    .post-image img {
+        max-width: 100%;
+        max-height: 400px;
+    }
+
+}
+
+
+/* Very small phones */
+@media (max-width: 400px) {
+
+    body {
+        width: 98%;
+    }
+
+    h1 {
+        font-size: 21px;
+    }
+
+    .thread {
+        padding: 8px;
+    }
+
+    .post {
+        padding: 8px;
+    }
+
+    .post-image img {
+        max-height: 300px;
+    }
+
+}
