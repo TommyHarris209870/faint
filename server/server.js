@@ -225,11 +225,6 @@ app.get("/dashboard", (req, res) => {
 
 // START SERVER
 
-app.listen(PORT, () => {
-
-    console.log("--------------------------------");
-    console.log(" Rotten is running successfully ");
-    console.log(` http://localhost:${PORT}`);
-    console.log("--------------------------------");
-
+app.listen(PORT, "0.0.0.0", () => {
+    console.log(`Server running on port ${PORT}`);
 });
